@@ -1,30 +1,32 @@
 @charset "utf8";
 
+/*
+   This file contains the layout settings used by the web form page. The layout concept 
+	is based on the flexbox system.
+	
+	Author: Ibing Maharlika
+   Date: 10/10/24
+*/
 
+
+/*Set display for the form.*/
 form#cOrder {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
-}
-
-form#cOrder {
-	/*background-color: rgb(241, 232, 181);*/
 	boder-radius: 20px;
 	-webkit-flex: 1 1 300px;
-	flex: 1 1 300px;
-	
-	padding: 10px;
-	margin: 0 0 0 14em;
-	
+	flex: 1 1 300px;	
+	padding: 10px;		
 }
 
+/*Set display for each form row.*/
 div.formRow {
 	display:-webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	margin: 7px 0px;
+	flex-flow: row wrap;	
 }
 
 div.formRow > * {
@@ -34,35 +36,27 @@ div.formRow > * {
 
 div.formRow > select,
 div.formRow > input {	
-	height: 20px;
-	
-	font-family:'Roboto', san-serif;
-	color: rgb(0, 0,0);
-	font-size: 1em;	
-	
+	height: 20px;		
 	max-width: 250px;	
 }
-div.formRow select#occupation {
-	
-	height: 25px;
-	font-size: 0.9em;
+
+div.formRow select#occupation {	
+	height: 25px;	
 }
+
 /* Legend Styles */
-legend {
-	
+legend {	
 	padding:5px;
 }
+
+/*Checkbox setting.*/
 #contactMeCB {
 	display: flex;
 	padding-top: 1em;
 	justify-content:right;
-	
-
 }
 
-
-/* Text Area Styles */
-/*textarea {*/
+/* Text Area and Caption Styles */
 #commBox {
 	flex-basis: 100%;
 	margin-top: 10px;
@@ -71,13 +65,10 @@ legend {
 	resize: none;
 }
 
-
-/* Spinner Styles *//*
-div.formRow > input#dineSpin {
-	-webkit-flex:0 0 50px;
-	flex: 0 0 50px;
-}*/
-
+#charCaption {
+   font-size: 0.7em;   /* Smaller text */
+   color: grey;        /* Optional: grey color for the caption */   
+}
 
 /* Form Button Styles */
 div#buttons {
@@ -90,14 +81,12 @@ input[type='submit'], input[type='reset'] {
 	padding: 5px;
 	margin: 15px;
 }
-#charCaption {
-   font-size: 0.7em;   /* Smaller text */
-   color: grey;        /* Optional: grey color for the caption */
-   
-}
+
+/*Hide the Contact Me button, as this is available only on the main page. */
 #gotoButton {
 	visibility: hidden;
 }
+
 /* Validation Styles */
 input:focus, select:focus, textarea:focus {
 	background-color: rgb(220, 255, 220);
@@ -127,37 +116,30 @@ input#mail:focus:invalid {
       flex-flow: column;
 		flex-direction: column;
 		max-width: 640px;
-		width: 80%;
-	
-		padding: 10px;
-		margin: 0 0 0 2em;	
+		width: 80%;	
+		padding: 10px;			
 	}
 
 	div.formRow > select,
 	div.formRow > input {	
 		height: 30px;
-		font-size: 1em;
 		max-width: 250em;	
 		padding: 0.1em 0;		
 	}
 	
 	div.formRow select#occupation {
 		flex-basis: 100%;
-		height: 100%;	
-		font-size: 1em;
+		height: 100%;			
 	}
+	
+	/*This is to make the checkbox larger in the smaller screen. */
 	input[type="checkbox"] {
-   transform: scale(2); /* Increase size by 1.5 times */
-   -webkit-transform: scale(2); /* For Safari compatibility */
-   -moz-transform: scale(2); /* For older Firefox compatibility */
-}
+		transform: scale(2); /* Increase size by 2 times */
+		-webkit-transform: scale(2); 
+		-moz-transform: scale(2);
+	}
+	
 	form#contact label {
 		padding: 0.5em 0 0.2em 0;
-	}
-}
-
-@media only screen and (min-width: 641px) and (max-width: 960px) {
-	form#cOrder {
-		margin: 0 0 0 11em;	
 	}
 }

@@ -3,7 +3,7 @@
    This file contains the base styles used by the first page.
 	
 	Author: Ibing Maharlika
-   Date: 9/23/24
+   Date: 10/10/24
 */
 
 /* =============================================
@@ -51,12 +51,24 @@ nav.horizontalNavigation li {
 a#navicon{
 	display: none;
 }
-/* Right Column Text Setting */
+
+/*Main body section- image and text.*/
+#about-section {		
+	background-color:hsl(132,11%,91%);	
+}
+
+#leftColumn  {	
+	margin: 2em 2em 2em 2.5em;
+}
+
+#rightColumn {			
+	margin: 1em 3em 2em 2em;	
+}
+
 #rightColumn h1 {	
 	font-family:'Roboto', san-serif;
 	color: rgb(78,88,54);	
 	font-size: clamp(1.8em, 2vw, 2.5em);
-	
 }
 
 #rightColumn p {	
@@ -68,6 +80,7 @@ a#navicon{
 
 /* Footer Setting */
 body > footer {	
+	background-color: hsla(72, 24%, 20%, 70%);
 	font-size:clamp(0.6em, 2vw, 0.9em);
 	color:hsl(132,11%,70%);
 }
@@ -80,13 +93,10 @@ body > footer h2 {
    margin: 1em 0 0.5em 0;
 }
 
-	/* Footer Vertical Navigation Styles */
-	/*nav.verticalNavigation {
-		margin: 0 0 0 15em;
-	}*/
-	nav.verticalNavigation h2 {
-		margin-left: 15em;
-	}
+nav.verticalNavigation h2 {
+	margin-left: 15em;
+}
+
 nav.verticalNavigation ul {
    margin: 0 0 0 16.5em;
    line-height: 2em;	
@@ -108,47 +118,32 @@ nav.verticalNavigation a:active {
 }
 
 .btn.goto {
+	background-color: hsla(38,42%,70%, 70%);
+	border: 0.5px hsla(38,42%,70%, 70%);	
 	color:hsla(72, 24%, 20%, 70%);
 	font-size: 1.1em;
 	text-decoration: none;
 	margin: 1em 0 0 11em;
 }
 
+.btn.goto:hover {
+	background: hsla(38,42%,70%,90%);
+}
+
 #contactInfo p {
    line-height: 1.5em;
-   margin-left: 5.5em;	
-	
+   margin-left: 5.5em;		
 }   
-#contactInfo  h2 {
-  
+
+#contactInfo  h2 {  
    margin-left: 5em;	
-	
-}   
+}
+   
 #copyRight {
 	text-align: left;	
 	font-size:0.9em;	
 }
 
-/*
-@media only screen and (max-width: 480px) {
-	a#navicon {
-      display: block;
-   }
-   
-   header nav ul {
-      display: none;
-   }
-   
-   header nav ul li {
-      font-size: 1em;
-      line-height: 1.3em;
-      height: 1.3em;
-   }
-   
-   a#navicon:hover+ul, header nav ul:hover {
-      display: block;
-   }
-}*/
 @media only screen and (max-width: 640px) {
 	a#navicon {
       display: block;
@@ -202,8 +197,7 @@ nav.verticalNavigation a:active {
 		font-size: 1.8em;
 		margin-left: 2em;	
 	}   
-	#copyRight {
-		
+	#copyRight {		
 	font-size:1.1em;	
 }
 }
@@ -212,9 +206,15 @@ nav.verticalNavigation a:active {
 	nav.verticalNavigation h2 {
 		margin-left: 12em;
 	}
-nav.verticalNavigation ul {
-   margin: 0 0 0 13.2em;
-   line-height: 2em;	
-}
 	
+	nav.verticalNavigation ul {
+		margin: 0 0 0 13.2em;
+		line-height: 2em;	
+	}	
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1270px) {
+	#leftColumn  {		
+		margin: 5em 2em 2em 2.5em;
+	}
 }

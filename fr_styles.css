@@ -1,21 +1,24 @@
 @charset "utf-8";
 
+/*
+   This file contains the base styles used by the web form page.
+	
+	Author: Ibing Maharlika
+   Date: 10/10/24
+*/
+
+/*Set main body specifications.*/
 body {
 	min-height: 100%;  
    margin: 0px auto;
-
    max-width: 1020px;  
    min- width: 100%;
 }
-/*
-a#navicon {
-   display: none;
-}*/
 
+/*Form section setting.*/
 body > section {
 	background-color:hsl(132,11%,91%);
-	margin-top:0;
-	
+	margin-top:0;	
 }
 
 section h1 {
@@ -38,18 +41,40 @@ legend {
    font-weight: normal;
    color: rgb(78,88,54);
 }
+
 form#cOrder {
-	
+	margin: 0 0 0 14em;
 	font-size: 1.2em;	
 }
+
+/*Form rows setting.*/
+div.formRow {	
+	margin: 7px 0px;
+}
+
+div.formRow > select,
+div.formRow > input {	
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);
+	font-size: 1em;		
+}
+
+/*Selection box.*/
+div.formRow select#occupation {	
+	font-size: 0.9em;
+}
+
+/*Checkbox font size.*/
 #contactMeCB {
 	font-size: 0.9em;
 }
 
+/*Clear and Submit buttons font size.*/
 div#buttons {
 	font-size: 0.8em;	
 }
 
+/*Mainly for caption lettering.*/
 section p {
    line-height: 1em;
    margin: 2px 0px;
@@ -62,9 +87,25 @@ section p {
 	
 	form#cOrder {
 		font-size: 1.8em;	
+		margin: 0 0 0 2em;
 	}
-
+	
+	div.formRow > select,
+	div.formRow > input {			
+		font-size: 1em;		
+	}
+	div.formRow select#occupation {		
+		font-size: 1em;
+	}
+	
 	#commBox {
 		font-size: 1em;
+	}
+}
+
+
+@media only screen and (min-width: 641px) and (max-width: 960px) {
+	form#cOrder {
+		margin: 0 0 0 11em;	
 	}
 }
