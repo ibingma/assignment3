@@ -1,0 +1,220 @@
+@charset "utf-8"
+/*
+   This file contains the base styles used by the first page.
+	
+	Author: Ibing Maharlika
+   Date: 9/23/24
+*/
+
+/* =============================================
+	HTML5 structural elements
+   =============================================
+*/
+
+article, aside, details, dl, figcaption, figure, footer, header, hgroup, main, nav, section {
+	display: block;
+}
+
+/* =============================================
+	Default colors, margins and sizing
+   =============================================
+*/
+
+html {		
+	background-color:hsl(132, 4%,70%);		
+}
+
+body { /*Center the body position*/
+	margin-left: auto;
+   margin-right: auto;
+}
+
+/* Horzontal Navigation Bar */
+nav.horizontalNavigation a {
+   font-family: 'Roboto';  	
+	font-size:clamp(1em, 1vw, 1.5em); /*responsive text (min, preferred, max)*/
+   line-height: 2.8em;
+   text-decoration:none;
+	color: rgb(78,88,54);	
+}  	
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   text-decoration: underline;
+	opacity:0.8;
+}
+
+nav.horizontalNavigation li {
+	text-align: center;
+}
+
+a#navicon{
+	display: none;
+}
+/* Right Column Text Setting */
+#rightColumn h1 {	
+	font-family:'Roboto', san-serif;
+	color: rgb(78,88,54);	
+	font-size: clamp(1.8em, 2vw, 2.5em);
+	
+}
+
+#rightColumn p {	
+	font-family:'Roboto', san-serif;
+	color: rgb(0, 0,0);	
+	font-size: clamp(0.9em, 2vw, 1.2em);
+	line-height: 1.40em;
+}
+
+/* Footer Setting */
+body > footer {	
+	font-size:clamp(0.6em, 2vw, 0.9em);
+	color:hsl(132,11%,70%);
+}
+
+body > footer h2 {   
+	color:hsl(38,42%,70%);	
+   font-size: 1.1em;
+	font-weight: normal;
+   letter-spacing: 0.1em;
+   margin: 1em 0 0.5em 0;
+}
+
+	/* Footer Vertical Navigation Styles */
+	/*nav.verticalNavigation {
+		margin: 0 0 0 15em;
+	}*/
+	nav.verticalNavigation h2 {
+		margin-left: 15em;
+	}
+nav.verticalNavigation ul {
+   margin: 0 0 0 16.5em;
+   line-height: 2em;	
+}
+
+ nav.verticalNavigation a {	
+	color:hsl(132,11%,70%)!important;
+	text-decoration:none;
+}
+
+nav.verticalNavigation a:link, 
+nav.verticalNavigation a:visited {
+   color: rgb(186, 186, 156);
+}
+
+nav.verticalNavigation a:hover, 
+nav.verticalNavigation a:active {
+   text-decoration: underline;
+}
+
+.btn.goto {
+	color:hsla(72, 24%, 20%, 70%);
+	font-size: 1.1em;
+	text-decoration: none;
+	margin: 1em 0 0 11em;
+}
+
+#contactInfo p {
+   line-height: 1.5em;
+   margin-left: 5.5em;	
+	
+}   
+#contactInfo  h2 {
+  
+   margin-left: 5em;	
+	
+}   
+#copyRight {
+	text-align: left;	
+	font-size:0.9em;	
+}
+
+/*
+@media only screen and (max-width: 480px) {
+	a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+}*/
+@media only screen and (max-width: 640px) {
+	a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+	
+	#rightColumn h1 {		
+		font-size: 2.5em;	
+	}
+
+	#rightColumn p {	
+		font-size: 1.2em;
+	}
+	
+   #gotoButton {
+		margin: 0 0 0 6em;
+		font-size: 2em;
+	}
+	
+	nav.verticalNavigation h2 {
+		margin-left: 7em;
+		font-size: 1.8em;
+	}
+	
+	nav.verticalNavigation ul {
+		margin: 0 0 0 8.7em;
+		line-height: 2em;	
+		font-size: 1.5em;
+	}
+	
+	#contactInfo p {
+		line-height: 1.5em;
+		margin-left: 2.5em;	
+		font-size: 1.5em;	
+	}   
+	
+	#contactInfo  h2 {
+		font-size: 1.8em;
+		margin-left: 2em;	
+	}   
+	#copyRight {
+		
+	font-size:1.1em;	
+}
+}
+
+@media only screen and (min-width: 641px) {
+	nav.verticalNavigation h2 {
+		margin-left: 12em;
+	}
+nav.verticalNavigation ul {
+   margin: 0 0 0 13.2em;
+   line-height: 2em;	
+}
+	
+}

@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+body {
+	min-height: 100%;  
+   margin: 0px auto;
+
+   max-width: 1020px;  
+   min- width: 100%;
+}
+/*
+a#navicon {
+   display: none;
+}*/
+
+body > section {
+	background-color:hsl(132,11%,91%);
+	margin-top:0;
+	
+}
+
+section h1 {
+   font-size: 2.4em;
+   line-height: 2em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.3em;
+   text-align: center;
+   font-weight: normal;
+   color: rgb(78,88,54);
+	text-decoration:underline;
+}
+
+legend {
+	font-size: 1.4em;
+   line-height: 1.8em;
+   font-family: 'Roboto', san-serif;
+   letter-spacing: 0.1em;
+   text-align: left;
+   font-weight: normal;
+   color: rgb(78,88,54);
+}
+form#cOrder {
+	
+	font-size: 1.2em;	
+}
+#contactMeCB {
+	font-size: 0.9em;
+}
+
+div#buttons {
+	font-size: 0.8em;	
+}
+
+section p {
+   line-height: 1em;
+   margin: 2px 0px;
+}
+
+@media only screen and (max-width: 640px) {
+	legend {
+		font-size: 1.1em;
+   }
+	
+	form#cOrder {
+		font-size: 1.8em;	
+	}
+
+	#commBox {
+		font-size: 1em;
+	}
+}

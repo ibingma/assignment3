@@ -1,0 +1,179 @@
+@charset "utf8";
+/*
+   This file contains the layout settings used by the first page. The layout concept 
+	is based on the floating system.
+	
+	Author: Ibing Maharlika
+   Date: 9/23/24
+*/
+
+html {
+	height: 100%;		
+}
+
+body {  
+   
+	height: 100vh; /* Full height of the viewport */
+	min-height:100%; /*set minimum height to match browser window full height*/
+	max-width: 1024px;
+   min-width: 640px;   
+	width:95%;
+	
+ }
+
+body > header > img {	
+	width: 100%;	
+	height: auto; /*Maintain image aspect ratio*/
+}
+
+/*Set width for each navigation button to 20% of body width and float to left*/
+body > header > nav.horizontalNavigation li { 
+	width:20%; 
+	
+	
+}
+
+#about-section {
+	display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+		
+		background-color:hsl(132,11%,91%);	
+}
+
+/*Columns section, left is for image, right is for text*/
+#leftColumn  {	
+	flex:1;
+	width: 40%;	
+	margin: 2em 2em 2em 2.5em;
+}
+
+#leftColumn img {
+	width:100%;	
+	box-shadow:rgb(51,51,51) -15px 0px 25px;
+}
+
+#rightColumn {		
+	flex:1;
+	margin: 1em 3em 2em 2em;	
+}
+
+#rightColumn p {
+	padding-top:1em;	
+}
+
+/* Footer section is floated to the right except fot the copy right section which is
+	floated to the left.*/
+footer {	
+	background-color: hsla(72, 24%, 20%, 70%);
+	display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+			
+}
+/*
+footer::after { /*Prevent container collapse
+	clear: both;
+	content: "";
+	display: table;	
+}*/
+
+#contactInfo  {
+	flex:1;
+	/*width: 34%;
+	padding-left:5.5%;	*/
+}
+
+footer > nav.verticalNavigation {
+	flex: 1;	
+	/*width: 22%;
+	padding-left:12%;	
+	display:block;*/
+	
+}
+
+footer > nav.verticalNavigation li {
+	text-align:left;	
+}
+
+ footer > nav.verticalNavigation img {
+	 display:inline;
+ }
+#gotoButton {
+	flex: 1;
+	/*padding-top:1.5em;
+	padding-right:8.8em;*/
+}
+
+/*Layout setting for the go-to-button*/
+.btn.goto {
+	border: 0.5px hsla(38,42%,70%, 70%);
+	background-color: hsla(38,42%,70%, 70%);
+	padding: 0.5em 1.5em;	
+	cursor: pointer;
+	display: inline-block;
+	border-radius:30px;
+	width: 5em;
+	
+}
+/* On mouse-over */
+.btn.goto:hover {
+	background: hsla(38,42%,70%,90%);
+}
+
+#copyRight {
+	flex-basis: 100%;
+	
+	padding-left:3em;	
+}
+/*
+@media only screen and (max-width: 480px) {
+	
+}*/
+
+@media only screen and (max-width: 640px){
+	#about-section {
+    flex-direction: column; /* Stack the columns vertically on smaller screens */
+    align-items: center; /* Center-align the content when stacked */
+  }
+	#leftColumn img {
+		display: none;
+	}
+	#rightColumn {
+		flex: none;
+		display: 100%;
+		font-size: 1.4em;
+	}
+	
+	footer {
+		flex-direction: row;		
+	}
+	
+	#gotoButton {
+		flex-basis: 100%;
+		
+	}
+}
+@media only screen and (min-width: 641px) {
+   
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 0 1 auto;
+      flex: 0 1 auto;
+   }
+	
+	#leftColumn  {		
+	margin: 5em 2em 2em 2.5em;
+}
+
+}
